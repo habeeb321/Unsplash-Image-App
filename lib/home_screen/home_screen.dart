@@ -64,12 +64,12 @@ class HomeScreen extends GetView<UnsplashController> {
                           ),
                           itemCount: controller.filteredImageList.length,
                           itemBuilder: (context, index) {
-                            // var image = controller.filteredImageList[index].user
-                            //         ?.profileImage?.large ??
-                            //     '';
-                            var image = controller
-                                    .filteredImageList[index].urls?.small ??
+                            var image = controller.filteredImageList[index].user
+                                    ?.profileImage?.large ??
                                 '';
+                            // var image = controller
+                            //         .filteredImageList[index].urls?.small ??
+                            //     '';
                             var name = controller
                                     .filteredImageList[index].user?.name ??
                                 '';
@@ -118,14 +118,17 @@ class HomeScreen extends GetView<UnsplashController> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      // var image = controller.filteredImageList[index].user
-                                      //         ?.profileImage?.large ??
-                                      //     '';
                                       var image = controller
                                               .filteredImageList[index]
-                                              .urls
-                                              ?.small ??
+                                              .user
+                                              ?.profileImage
+                                              ?.large ??
                                           '';
+                                      // var image = controller
+                                      //         .filteredImageList[index]
+                                      //         .urls
+                                      //         ?.small ??
+                                      //     '';
                                       controller.saveImageToStorage(
                                           image, context);
                                     },
@@ -143,14 +146,17 @@ class HomeScreen extends GetView<UnsplashController> {
                                       ),
                                     ),
                                     onPressed: () {
-                                      // var image = controller.filteredImageList[index].user
-                                      //         ?.profileImage?.large ??
-                                      //     '';
                                       var image = controller
                                               .filteredImageList[index]
-                                              .urls
-                                              ?.small ??
+                                              .user
+                                              ?.profileImage
+                                              ?.large ??
                                           '';
+                                      // var image = controller
+                                      //         .filteredImageList[index]
+                                      //         .urls
+                                      //         ?.small ??
+                                      //     '';
                                       controller.cropImage(image, context);
                                     },
                                   ),

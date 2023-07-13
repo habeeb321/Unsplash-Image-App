@@ -18,7 +18,7 @@ class UnsplashController extends GetxController {
   final isLoading = false.obs;
   getImages() async {
     isLoading.value = true;
-    imageList.clear();
+    imageList.clear(); 
     try {
       var res = await UnsplashService().fetchImages();
       var data = jsonDecode(res);
